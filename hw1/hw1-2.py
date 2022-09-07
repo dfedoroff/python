@@ -6,7 +6,7 @@
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
 x = int(input('Введите 0 или 1 для X: '))
-y = int(input('Введите 0 или 1 для  Y: '))
+y = int(input('Введите 0 или 1 для Y: '))
 z = int(input('Введите 0 или 1 для Z: '))
 if (x not in range(2)) or (y not in range(2)) or (z not in range(2)):
     print('Повторите ввод. Введите 0 или 1.')
