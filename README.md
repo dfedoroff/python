@@ -1,32 +1,32 @@
 # Python
 
-This repository holds solutions, exercises, homeworks done in Python language since I've been studying at massive programming course provided at the GeekBrains educational online platform.
+В этом репозитории хранятся решения, упражнения, домашние задания, сделанные на языке Python, во время прохождения курса по программированию на образовательной онлайн-платформе GeekBrains.
 
-## Conventional commits
+## Обычные коммиты
 
-All commits must adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) spec.
+Все коммиты должны соответствовать [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) спецификации.
 
-Most of the commit types originally from:
+Большинство типов коммитов были взяты здесь:
 * [Angular Git Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type)
 * [commitizen/cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog)
 * [conventional-commit-types](https://github.com/commitizen/conventional-commit-types)
 
-## Commit types
+## Типы коммитов
 
-| Commit Type | Title                     | Description                                                                                                 |
-| ----------- | ------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `chore`     | Chores                    | Changes that don't modify src or test files                                                                 |
-| `ci`        | Continuous Integrations   | Changes to CI configuration files and scripts                                                               |
-| `dc`        | Driver Code / Driver Class| A driver code or class that drives the execution of the overall task                                        |
-| `docs`      | Documentation             | Documentation only changes                                                                                  |
-| `feat`      | Features                  | A new feature                                                                                               |
-| `fix`       | Bug Fixes                 | A bug fix                                                                                                   |
-| `perf`      | Performance Improvements  | A code change that improves performance                                                                     |
-| `refactor`  | Code Refactoring          | A code change that neither fixes a bug nor adds a feature                                                   |
-| `build`     | Builds                    | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |
-| `revert`    | Reverts                   | Reverts a previous commit                                                                                   |
-| `style`     | Styles                    | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |
-| `test`      | Tests                     | Adding missing tests or correcting existing tests                                                           |
-| `theme`     | Themes                    | Changes related to UI theming                                                                               |
+| Типы коммитов | Название                  | Описание                                                                                                    |
+| ------------- | --------------------------| ----------------------------------------------------------------------------------------------------------- |
+| `chore`       | Chores                    | Изменения, не затрагивающие исходный код или тестовые файлы                                                 |
+| `ci`          | Continuous Integrations   | Изменения в CI конфигурационных файлах и скриптах                                                           |
+| `dc`          | Driver Code / Driver Class| Код или класс, управляющий выполнением всей программы                                                       |
+| `docs`        | Documentation             | Изменения, затрагивающие только документацию                                                                |
+| `feat`        | Features                  | Добавление новой фичи                                                                                       |
+| `fix`         | Bug Fixes                 | Исправление бага                                                                                            |
+| `perf`        | Performance Improvements  | Изменения кода, повышающие производительность                                                               |
+| `refactor`    | Code Refactoring          | Изменения кода, не связанные с исправлением бага или добавлением новой фичи                                 |
+| `build`       | Builds                    | Изменения, влияющие на систему сборки или внешние зависимости (например: gulp, broccoli, npm)               |
+| `revert`      | Reverts                   | Отмена предыдущего коммита                                                                                  |
+| `style`       | Styles                    | Изменения, не влияющие на логику кода (пробелы, форматирование, отсутствие точек с запятой и т.п.)          |
+| `test`        | Tests                     | Добавление отсутствующих тестов или исправление существующих тестов                                         |
+| `theme`       | Themes                    | Изменения, связанные с оформлением пользовательского интерфейса                                             |
 
-When adding a new file to the Git repository none of the above commit types is used.
+При добавлении нового файла в репозиторий Git ни один из перечисленных выше типов коммитов не используется.
