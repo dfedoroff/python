@@ -14,7 +14,7 @@
 day = int(input('Введите номер дня недели: '))
 if day < 6:
     print('Нет, это рабочий день.')
-elif day == 6 or day == 7:
+elif (day == 6) or (day == 7):
     print('Да, это выходной.')
 else:
     print('Такого дня не существует.')
