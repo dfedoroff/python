@@ -18,6 +18,17 @@ def rand(num, start, end):
         lst.append(n)
     return lst
 
+def find_diff(lst_num):
+    max_num = lst_num[0]%1
+    min_num = lst_num[0]%1
+    for i in range(1, len(lst_num)):
+        if lst_num[i]%1 > max_num:
+            max_num = lst_num[i]%1
+        elif lst_num[i]%1 < min_num:
+            min_num = lst_num[i]%1
+    diff = max_num - min_num
+    return diff, max_num, min_num
+
 num = int(input('Введите количество элементов списка: '))
 start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
