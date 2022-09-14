@@ -29,3 +29,5 @@ num = int(input('Введите количество элементов спис
 start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
 rand_list = rand(num, start, end)
+print(f'Cписок случайных чисел: {rand(num, start, end)}')
+print(f'Сумма элементов списка на нечетных позициях = {sum_odd_pos(rand_list)}')
