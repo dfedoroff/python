@@ -19,6 +19,12 @@ def rand(num, start, end):
         lst.append(n)
     return lst
 
+def mult_pairs(lst_num):
+    lst_pairs = []
+    for i in range((len(lst_num) + 1) // 2):
+        lst_pairs.append(lst_num[i] * lst_num[len(lst_num) - 1 - i])
+    return lst_pairs
+
 num = int(input('Введите количество элементов списка: '))
 start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
