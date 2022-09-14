@@ -18,6 +18,13 @@ def rand(num, start, end):
         lst.append(n)
     return lst
 
+def sum_odd_pos(lst_num):
+    total = 0
+    for i in range(len(lst_num)):
+        if i % 2 != 0:
+            total += lst_num[i]
+    return total
+
 num = int(input('Введите количество элементов списка: '))
 start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
