@@ -18,3 +18,4 @@ def convert_to_binary(num):
     return result
 
 n = int(input('Введите десятичное число: '))
+print(f'Число преобразовано в двоичное: {convert_to_binary(n)}')
