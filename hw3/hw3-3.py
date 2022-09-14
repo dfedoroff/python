@@ -34,3 +34,6 @@ start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
 rand_list = rand(num, start, end)
 print(f'Cписок случайных чисел: {rand_list}')
+print(f'Разница между макс. ({round(find_diff(rand_list)[1], 2)}) и'
+      f' мин. ({round(find_diff(rand_list)[2], 2)}) значениями'
+      f' дробной части = {round(find_diff(rand_list)[0], 2)}')
