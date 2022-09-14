@@ -10,4 +10,11 @@
 # 3 -> 11
 # 2 -> 10
 
+def convert_to_binary(num):
+    result = ''
+    while num != 0:
+        result = str(num % 2) + result
+        num //= 2
+    return result
+
 n = int(input('Введите десятичное число: '))
