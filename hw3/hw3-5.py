@@ -18,3 +18,4 @@ def fibo(num):
     return lst_neg[::-1] + lst_pos
 
 n = int(input('Введите число: '))
+print(f'Cписок чисел Фибоначчи: {fibo(n)}')
