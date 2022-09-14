@@ -21,3 +21,4 @@ def rand(num, start, end):
 num = int(input('Введите количество элементов списка: '))
 start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
+rand_list = rand(num, start, end)
