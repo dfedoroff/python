@@ -9,6 +9,15 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> 12
 
+import random
+
+def rand(num, start, end):
+    lst = []
+    for i in range(num):
+        n = random.randint(start, end)
+        lst.append(n)
+    return lst
+
 num = int(input('Введите количество элементов списка: '))
 start = int(input('Введите начало диапазона: '))
 end = int(input('Введите конец диапазона: '))
