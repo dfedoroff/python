@@ -23,6 +23,11 @@ def find_polynomial(k):
             result += ratios[i] + 'x^' + str(k - i) + ' + '
     return result
 
+def write_file(output):
+    with open('polynominal.txt', 'w+') as data:
+        data.write(output)
+    print(f'Файл с многочленом записан.')
+
 k = int(input('Введите натуральную степень k = '))
 polynomial = find_polynomial(k)
 print(f'Многочлен в степени {k}: {polynomial}')
