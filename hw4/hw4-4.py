@@ -31,3 +31,4 @@ def write_file(output):
 k = int(input('Введите натуральную степень k = '))
 polynomial = find_polynomial(k)
 print(f'Многочлен в степени {k}: {polynomial}')
+write_file(polynomial)
