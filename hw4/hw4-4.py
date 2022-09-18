@@ -24,3 +24,5 @@ def find_polynomial(k):
     return result
 
 k = int(input('Введите натуральную степень k = '))
+polynomial = find_polynomial(k)
+print(f'Многочлен в степени {k}: {polynomial}')
