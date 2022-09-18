@@ -20,3 +20,4 @@ def find_simple_multipliers(n):
     return lst
 
 n = int(input('Введите число: '))
+print(f'Простые множители числа {n}: {find_simple_multipliers(n)}')
