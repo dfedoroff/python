@@ -20,3 +20,5 @@ def round_with_precision(d):
     return result, prec
 
 d = input('Задайте точность числа Пи от 0.1: ')
+print(f'Представление числа Пи до {round_with_precision(d)[1]} знака = '
+      f'{round(round_with_precision(d)[0], round_with_precision(d)[1])}')
