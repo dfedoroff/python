@@ -20,3 +20,4 @@ def find_duplicates(lst):
     return output_list
 
 lst = input('Введите числа: ')
+print(f'Список неповторяющихся элементов: {find_duplicates(lst)}')
