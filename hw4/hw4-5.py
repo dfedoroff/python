@@ -67,6 +67,23 @@ def calc_poly(poly):
             sqrt += 1
     return lst
 
+def sum_poly(poly1, poly2):
+    lst1 = calc_poly(poly1)
+    lst2 = calc_poly(poly2)
+    l = len(lst1)
+    if len(lst1) > len(lst2):
+        l = len(lst2)
+    lst_new = [lst1[i] + lst2[i] for i in range(l)]
+    if len(lst1) > len(lst2):
+        m = len(lst1)
+        for i in range(l, m):
+            lst_new.append(lst1[i])
+    else:
+        m = len(lst2)
+        for i in range(l, m):
+            lst_new.append(lst2[i])
+    return lst_new
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
