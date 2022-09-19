@@ -20,6 +20,10 @@ def find_polynomial(k):
             result += ratios[i] + 'x^' + str(k - i) + ' + '
     return result
 
+def write_file(name, poly):
+    with open(name, 'w') as data:
+        data.write(poly)
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
