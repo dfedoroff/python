@@ -29,6 +29,16 @@ def read_poly(file):
         poly = data.readlines()
     return poly
 
+def find_sqrt_poly(k):
+    if 'x^' in k:
+        i = k.find('^')
+        result = int(k[i + 1:])
+    elif ('x' in k) and ('^' not in k):
+        result = 1
+    else:
+        result = -1
+    return result
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
