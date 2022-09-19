@@ -24,6 +24,11 @@ def write_file(name, poly):
     with open(name, 'w') as data:
         data.write(poly)
 
+def read_poly(file):
+    with open(str(file), 'r') as data:
+        poly = data.readlines()
+    return poly
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
