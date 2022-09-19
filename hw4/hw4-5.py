@@ -84,6 +84,27 @@ def sum_poly(poly1, poly2):
             lst_new.append(lst2[i])
     return lst_new
 
+def create_poly(sum_p):
+    lst = sum_p[::-1]
+    result = ''
+    if len(lst) < 1:
+        result = 'x = 0'
+    else:
+        for i in range(len(lst)):
+            if (i != len(lst) - 1) and (lst[i] != 0) and (i != len(lst) - 2):
+                result += f'{lst[i]}x^{len(lst) - i - 1}'
+                if (lst[i + 1] != 0) or (lst[i + 2] != 0):
+                    result += ' + '
+            elif (i == len(lst) - 2) and (lst[i] != 0):
+                result += f'{lst[i]}x'
+                if (lst[i + 1] != 0) or (lst[i + 2] != 0):
+                    result += ' + '
+            elif (i == len(lst) - 1) and (lst[i] != 0):
+                result += f'{lst[i]} = 0'
+            elif (i == len(lst) - 1) and (lst[i] == 0):
+                result += ' = 0'
+    return result
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
