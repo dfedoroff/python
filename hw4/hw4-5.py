@@ -22,3 +22,7 @@ def find_polynomial(k):
 
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
+polynomial1 = find_polynomial(k1)
+print(f'1-й многочлен: {polynomial1}')
+polynomial2 = find_polynomial(k2)
+print(f'2-й многочлен: {polynomial2}')
