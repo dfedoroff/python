@@ -45,6 +45,28 @@ def find_coef_poly(k):
         result = int(k[:i])
     return result
 
+def calc_poly(poly):
+    poly = poly[0].replace(' ', '').split('=')
+    poly = poly[0].split('+')
+    lst = []
+    l = len(poly)
+    k = 0
+    if find_sqrt_poly(poly[-1]) == -1:
+        lst.append(int(poly[-1]))
+        l -= 1
+        k = 1
+    sqrt = 1
+    i = l - 1
+    while i >= 0:
+        if (find_sqrt_poly(poly[i]) != -1) and (find_sqrt_poly(poly[i]) == sqrt):
+            lst.append(find_coef_poly(poly[i]))
+            i -= 1
+            sqrt += 1
+        else:
+            lst.append(0)
+            sqrt += 1
+    return lst
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
