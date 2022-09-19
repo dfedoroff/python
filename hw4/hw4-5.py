@@ -39,6 +39,12 @@ def find_sqrt_poly(k):
         result = -1
     return result
 
+def find_coef_poly(k):
+    if 'x' in k:
+        i = k.find('x')
+        result = int(k[:i])
+    return result
+
 k1 = int(input('Введите натуральную степень 1-го многочлена = '))
 k2 = int(input('Введите натуральную степень 2-го многочлена = '))
 polynomial1 = find_polynomial(k1)
