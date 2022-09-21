@@ -10,4 +10,8 @@ def read_file(file):
         raw_text = data.read()
     return raw_text
 
+def rem_words(text):
+    text = list(filter(lambda x: 'АБВ' not in x, text.split()))
+    return " ".join(text)
+
 print(f'Изначальный текст: {read_file("input-data.txt")}')
