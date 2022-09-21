@@ -15,3 +15,5 @@ def rem_words(text):
     return " ".join(text)
 
 print(f'Изначальный текст: {read_file("input-data.txt")}')
+text = rem_words(read_file('input-data.txt'))
+print(f'Итоговый результат: {text}')
