@@ -63,3 +63,4 @@ player2 = input('Представьтесь, пожалуйста: ')
 players = [player1, player2]
 n = 2021
 m = 28
+find_winner(n, m, players, messages)
