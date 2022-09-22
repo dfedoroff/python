@@ -23,3 +23,14 @@ def encode_rle(lst):
         else:
             count += 1
     return str_code
+
+def decode_rle(lst:str):
+    count = ''
+    str_decode = ''
+    for char in lst:
+        if char.isdigit():
+            count += char
+        else:
+            str_decode += char * int(count)
+            count = ''
+    return str_decode
