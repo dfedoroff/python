@@ -26,4 +26,12 @@ def introduce_players():
     print(f'Очень приятно, меня зовут {player2}')
     return [player1, player2]
 
+def get_rules(players):
+    n = 2021
+    m = 28
+    first = int(input(f'{players[0]}, если хотите ходить первым, нажмите 1, если нет, любую другую клавишу. '))
+    if first != 1:
+        first = 0
+    return [n, m, int(first)]
+
 print(rules)
