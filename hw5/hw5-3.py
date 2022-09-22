@@ -44,3 +44,7 @@ def start_game():
         else:
             game_over = False
         player1 = not(player1)
+
+print('Игра Крестики-нолики для 2-х игроков.')
+start_game()
+print(f'Победил', find_winner())
