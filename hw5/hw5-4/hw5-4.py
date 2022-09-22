@@ -9,3 +9,17 @@ def read_file(file):
     with open(file, 'r') as data:
         text = data.read()
     return text
+
+def encode_rle(lst):
+    str_code = ''
+    prev_char = ''
+    count = 1
+    for char in lst:
+        if char != prev_char:
+            if prev_char:
+                str_code += str(count) + prev_char
+            count = 1
+            prev_char = char
+        else:
+            count += 1
+    return str_code
