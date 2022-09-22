@@ -10,3 +10,7 @@ board = list(range(1, 10))
 def print_board(table):
     for i in range(3):
         print(table[0 + i * 3], table[1 + i * 3], table[2 + i * 3])
+
+def make_move(move, symbol):
+    i = board.index(move)
+    board[i] = symbol
