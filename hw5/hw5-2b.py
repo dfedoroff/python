@@ -35,3 +35,5 @@ def get_rules(players):
     return [n, m, int(first)]
 
 print(rules)
+players = introduce_players()
+rules = get_rules(players)
