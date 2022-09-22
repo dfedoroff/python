@@ -34,3 +34,7 @@ def decode_rle(lst:str):
             str_decode += char * int(count)
             count = ''
     return str_decode
+
+decoded_text = read_file('decoded.txt')
+print(f'Восстановленные данные: {decoded_text}')
+str_encode = encode_rle(decoded_text)
