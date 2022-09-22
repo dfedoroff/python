@@ -24,3 +24,23 @@ def find_winner():
         if (board[i[0]] == '\u001B[31mO\u001b[0m' and board[i[1]]) == ('\u001B[31mO\u001b[0m' and board[i[2]]) == ('\u001B[31mO\u001b[0m'):
             win = '\u001B[31mигрок 2\u001b[0m'
     return win
+
+def start_game():
+    game_over = False
+    player1 = True
+    while game_over == False:
+        print_board(board)
+        if player1 == True:
+            symbol = '\u001B[34mX\u001b[0m'
+            move = int(input('Ход \u001B[34mигрока 1\u001b[0m: ')) # ANSI .NET color blue \u001B[34m
+        else:
+            symbol = '\u001B[31mO\u001b[0m'
+            move = int(input('Ход \u001B[31mигрока 2\u001b[0m: ')) # ANSI .NET color red \u001B[31m
+        make_move(move, symbol)
+        win = find_winner()
+        if win != '':
+            game_over = True
+            print_board(board)
+        else:
+            game_over = False
+        player1 = not(player1)
