@@ -38,3 +38,4 @@ def decode_rle(lst:str):
 decoded_text = read_file('decoded.txt')
 print(f'Восстановленные данные: {decoded_text}')
 str_encode = encode_rle(decoded_text)
+print(f'Сжатые данные: {str_encode}')
