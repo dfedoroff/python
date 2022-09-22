@@ -78,3 +78,4 @@ def find_winner (rules, players, messages):
 print(rules)
 players = introduce_players()
 rules = get_rules(players)
+find_winner(rules, players, messages)
