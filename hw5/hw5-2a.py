@@ -50,6 +50,13 @@ def play_game(n, m, players, messages):
         count += 1
     return players[not count % 2]
 
+def find_winner (n, m, players, messages):
+    winner = play_game(n, m, players, messages)
+    if not winner:
+        print('Победителя нет.')
+    else:
+        print(f'В этот раз победил {winner}! Ему достаются все конфеты!')
+
 print(rules)
 player1 = input('Представьтесь, пожалуйста: ')
 player2 = input('Представьтесь, пожалуйста: ')
