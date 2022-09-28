@@ -7,6 +7,7 @@
 `/hw7/README.md`         | Условие задачи
 `/hw7/controller.py`     | Управляющий файл
 `/hw7/data_input.py`     | Ввод данных и запись их в файлы
+`/hw7/data_output.py`    | Вывод данных
 `/hw7/main.py`           | Oсновной файл для запуска программы
 `/hw7/user_interface.py` | Пользовательский интерфейс 
 
