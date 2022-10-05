@@ -6,6 +6,7 @@
 `/tic-tac-toe/.venv`        | Файлы виртуального окружения
 `/tic-tac-toe/.gitignore`   | Файл для исключения из индексации Git файлов и папок
 `/tic-tac-toe/README.md`    | Условие задачи
+`/tic-tac-toe/main.py`      | Oсновной файл игры
 
 ## Задача 1
 
