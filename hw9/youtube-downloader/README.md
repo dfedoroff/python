@@ -6,6 +6,7 @@
 `/youtube-downloader/.venv`             | Файлы виртуального окружения
 `/youtube-downloader/.gitignore`        | Файл для исключения из индексации Git файлов и папок
 `/youtube-downloader/README.md`         | Условие задачи
+`/youtube-downloader/main.py`           | Oсновной файл для запуска программы
 
 ## Задача 3
 
