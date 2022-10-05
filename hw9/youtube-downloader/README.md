@@ -8,6 +8,7 @@
 `/youtube-downloader/README.md`         | Условие задачи
 `/youtube-downloader/controller.py`     | Управляющий файл
 `/youtube-downloader/main.py`           | Oсновной файл для запуска программы
+`/youtube-downloader/user_interface.py` | Пользовательский интерфейс
 
 ## Задача 3
 
