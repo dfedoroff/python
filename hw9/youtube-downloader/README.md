@@ -9,6 +9,7 @@
 `/youtube-downloader/controller.py`     | Управляющий файл
 `/youtube-downloader/main.py`           | Oсновной файл для запуска программы
 `/youtube-downloader/user_interface.py` | Пользовательский интерфейс
+`/youtube-downloader/video.py`          | Загрузка и сохранение видео файла на диск
 
 ## Задача 3
 
