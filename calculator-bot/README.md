@@ -3,6 +3,7 @@
 Каталоги и файлы                    | Описание
 ------------------------------------|-----------------------------------------------------
 `/python/calculator-bot`            | Каталог файлов домашнего задания
+`/calculator-bot/images`            | Каталог скриншотов Telegram-бота
 `/calculator-bot/.gitignore`        | Файл для исключения из индексации Git файлов и папок
 `/calculator-bot/README.md`         | Условие задачи
 `/calculator-bot/calculator_bot.py` | Файл Telegram-бота
