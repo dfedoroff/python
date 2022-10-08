@@ -5,6 +5,7 @@
 `/python/calculator-bot`            | Каталог файлов домашнего задания
 `/calculator-bot/.gitignore`        | Файл для исключения из индексации Git файлов и папок
 `/calculator-bot/README.md`         | Условие задачи
+`/calculator-bot/calculator_bot.py` | Файл Telegram-бота
 `/calculator-bot/config.py`         | Файл с API токеном для запуска бота
 
 ## Задача
