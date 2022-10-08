@@ -7,6 +7,7 @@
 `/calculator-bot/README.md`         | Условие задачи
 `/calculator-bot/calculator_bot.py` | Файл Telegram-бота
 `/calculator-bot/config.py`         | Файл с API токеном для запуска бота
+`/calculator-bot/requirements.txt`  | Файл списка пакетов, используемых в проекте
 
 ## Задача
 
