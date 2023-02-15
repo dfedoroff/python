@@ -26,3 +26,10 @@ class Controller(object):
     def delete_all_notes(self):
         self.model.delete_all_notes()
         self.view.print_all_notes_deleted()
+
+    def delete_note(self, note_id):
+        try:
+            self.model.delete_note(note_id)
+            self.view.print_note_deleted(note_id)
+        except ValueError:
+            self.view.print_note_id_not_exist(note_id)
