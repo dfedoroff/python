@@ -53,3 +53,13 @@ def start():
 
         else:
             break
+
+
+def get_int_input():
+    while True:
+        value = input()
+        if re.match('^[1-9]\\d*$', value):
+            return int(value)
+        else:
+            print('Введенное число не целое, отрицательное или равно нулю')
+            print('Повторите ввод: ', end='')
