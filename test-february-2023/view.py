@@ -33,3 +33,7 @@ class View(object):
     @staticmethod
     def print_note_deleted(note_id):
         print('\nЗаметка с id: {} удалена'.format(note_id))
+
+    @staticmethod
+    def print_all_notes_deleted():
+        print('\nВсе заметки удалены')
