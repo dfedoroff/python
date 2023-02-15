@@ -20,3 +20,7 @@ class View(object):
     @staticmethod
     def print_note_id_not_exist(note_id):
         print('\nЗаметки с id: {} нет'.format(note_id))
+
+    @staticmethod
+    def print_note_saved():
+        print('\nНовая заметка сохранена')
