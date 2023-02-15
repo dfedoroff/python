@@ -22,3 +22,7 @@ class Controller(object):
     def update_note(self, note_id, note):
         self.model.update_note(note_id, note)
         self.view.print_note_updated(note_id)
+
+    def delete_all_notes(self):
+        self.model.delete_all_notes()
+        self.view.print_all_notes_deleted()
