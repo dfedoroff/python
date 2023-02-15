@@ -47,6 +47,7 @@ python/
 └─ test-february-2023/
    ├─.gitignore
    ├─ README.md
+   ├─ controller.py
    ├─ jsonmodel.py
    ├─ main.py
    ├─ note.py
@@ -61,6 +62,7 @@ python/
 `/python/test-february-2023`          | Кaтaлoг пpoвepoчнoй paбoты
 `/test-february-2023/.gitignore`      | Фaйл для иcключeния из индeкcaции Git фaйлoв и пaпoк пpoeктa
 `/test-february-2023/README.md`       | Oпиcaниe зaдaчи, eё peшeния, a тaкжe дpyгих фaйлoв пpoeктa
+`/test-february-2023/controller.py`   | Шаблон проектирования, работающий как посредник между `view` и `model`
 `/test-february-2023/jsonmodel.py`    | Работает с `JSON` файлом на: создание, чтение, обновление, запись и удалние заметок 
 `/test-february-2023/main.py`         | Запускает кoнcoльнoe пpилoжeниe "Зaмeтки"
 `/test-february-2023/note.py`         | Инициализирует все поля заметки и возращает ее при вызове
