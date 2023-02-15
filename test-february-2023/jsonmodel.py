@@ -9,6 +9,9 @@ class JSONmodel(object):
         self.filename = filename
         self.notes = list()
 
+    def read_notes(self):
+        return self.read_json_file()
+
     def write_json_file(self, notes):
         json_strings_list = list()
         for note in notes:
