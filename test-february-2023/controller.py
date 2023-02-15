@@ -7,3 +7,10 @@ class Controller(object):
     def print_all_notes(self):
         notes = self.model.read_notes()
         self.view.print_all_saved_notes(notes)
+
+    def print_note(self, note_id):
+        try:
+            note = self.model.read_note(note_id)
+            self.view.print_saved_note(note)
+        except ValueError:
+            self.view.print_note_id_not_exist(note_id)
