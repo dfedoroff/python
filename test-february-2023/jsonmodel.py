@@ -12,6 +12,14 @@ class JSONmodel(object):
     def read_notes(self):
         return self.read_json_file()
 
+    def read_note(self, search_id):
+        self.notes = self.read_notes()
+        for note in self.notes:
+            if note.note_id == search_id:
+                return note
+        else:
+            View.print_note_id_not_exist(search_id)
+
     def write_json_file(self, notes):
         json_strings_list = list()
         for note in notes:
