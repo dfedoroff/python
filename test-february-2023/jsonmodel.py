@@ -42,6 +42,11 @@ class JSONmodel(object):
 
         self.write_json_file(self.notes)
 
+    def delete_all_notes(self):
+        self.notes = self.read_notes()
+        self.notes.clear()
+        self.write_json_file(self.notes)
+
     def write_json_file(self, notes):
         json_strings_list = list()
         for note in notes:
