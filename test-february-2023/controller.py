@@ -14,3 +14,7 @@ class Controller(object):
             self.view.print_saved_note(note)
         except ValueError:
             self.view.print_note_id_not_exist(note_id)
+
+    def create_note(self, note):
+        self.model.create_note(note)
+        self.view.print_note_saved()
