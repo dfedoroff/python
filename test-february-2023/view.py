@@ -24,3 +24,8 @@ class View(object):
     @staticmethod
     def print_note_saved():
         print('\nНовая заметка сохранена')
+
+    @staticmethod
+    def print_note_updated(note_id):
+        print('\nЗаметка с id:{} обновлена'
+              .format(note_id))
