@@ -41,3 +41,13 @@ class Controller(object):
             return False
         else:
             return True
+
+    def note_id_exist(self, search_id):
+        notes = self.model.read_notes()
+        for note in notes:
+            if note.note_id == search_id:
+                return True
+        else:
+            self.view.print_note_id_not_exist(search_id)
+            return False
+
