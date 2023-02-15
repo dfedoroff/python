@@ -47,6 +47,15 @@ class JSONmodel(object):
         self.notes.clear()
         self.write_json_file(self.notes)
 
+    def delete_note(self, search_id):
+        self.notes = self.read_notes()
+
+        for index, note in enumerate(self.notes):
+            if note.note_id == search_id:
+                del self.notes[index]
+
+        self.write_json_file(self.notes)
+
     def write_json_file(self, notes):
         json_strings_list = list()
         for note in notes:
