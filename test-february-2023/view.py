@@ -29,3 +29,7 @@ class View(object):
     def print_note_updated(note_id):
         print('\nЗаметка с id:{} обновлена'
               .format(note_id))
+
+    @staticmethod
+    def print_note_deleted(note_id):
+        print('\nЗаметка с id: {} удалена'.format(note_id))
