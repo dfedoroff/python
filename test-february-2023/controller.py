@@ -33,3 +33,11 @@ class Controller(object):
             self.view.print_note_deleted(note_id)
         except ValueError:
             self.view.print_note_id_not_exist(note_id)
+
+    def notes_exist(self):
+        notes = self.model.read_notes()
+        if len(notes) == 0:
+            self.view.print_notes_not_exist()
+            return False
+        else:
+            return True
