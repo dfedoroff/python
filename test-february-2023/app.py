@@ -63,3 +63,11 @@ def get_int_input():
         else:
             print('Введенное число не целое, отрицательное или равно нулю')
             print('Повторите ввод: ', end='')
+
+
+def get_note_data():
+    note_id = 0
+    date = datetime.datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
+    title = input('Заголовок заметки: ')
+    text = input('Текст заметки: ')
+    return Note(note_id, date, title, text)
