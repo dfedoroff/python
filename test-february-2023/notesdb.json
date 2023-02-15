@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "date": "2023-02-09, 14:06:15",
+        "title": "title 1",
+        "text": "Text 2"
+    },
+    {
+        "id": 2,
+        "date": "2023-02-10, 14:13:48",
+        "title": "title 2",
+        "text": "Text 2"
+    },
+    {
+        "id": 3,
+        "date": "2023-02-11, 14:09:35",
+        "title": "title 3",
+        "text": "Text 3"
+    },
+    {
+        "id": 4,
+        "date": "2023-02-11, 15:08:23",
+        "title": "title 6",
+        "text": "Text 6"
+    },
+    {
+        "id": 5,
+        "date": "2023-02-12, 18:02:58",
+        "title": "title 4",
+        "text": "Text 4"
+    },
+    {
+        "id": 6,
+        "date": "2023-02-12, 19:43:35",
+        "title": "title 5",
+        "text": "Text 5"
+    },
+    {
+        "id": 7,
+        "date": "2023-02-13, 21:06:03",
+        "title": "title 7",
+        "text": "Text 7"
+    },
+    {
+        "id": 8,
+        "date": "2023-02-15, 00:14:06",
+        "title": "title 8",
+        "text": "Text 8"
+    }
+]
