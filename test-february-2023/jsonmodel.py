@@ -9,6 +9,18 @@ class JSONmodel(object):
         self.filename = filename
         self.notes = list()
 
+    def create_note(self, note):
+        self.notes = self.read_notes()
+        max_id = 0
+        for field in self.notes:
+            if field.note_id > max_id:
+                max_id = field.note_id
+        note_id = max_id + 1
+        note.note_id = note_id
+
+        self.notes.append(note)
+        self.write_json_file(self.notes)
+
     def read_notes(self):
         return self.read_json_file()
 
