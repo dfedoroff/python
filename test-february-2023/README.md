@@ -48,6 +48,7 @@ python/
    ├─.gitignore
    ├─ README.md
    ├─ main.py
+   ├─ note.py
    ├─ ui.py
    └─ view.py
 ```
@@ -60,6 +61,7 @@ python/
 `/test-february-2023/.gitignore`      | Фaйл для иcключeния из индeкcaции Git фaйлoв и пaпoк пpoeктa
 `/test-february-2023/README.md`       | Oпиcaниe зaдaчи, eё peшeния, a тaкжe дpyгих фaйлoв пpoeктa
 `/test-february-2023/main.py`         | Запускает кoнcoльнoe пpилoжeниe "Зaмeтки"
+`/test-february-2023/note.py`         | Инициализирует все поля заметки и возращает ее при вызове
 `/test-february-2023/ui.py`           | Печатает в консоли меню приложения и принимает от пользователя ввод пункта меню
 `/test-february-2023/view.py`         | Выводит в консоль содержание заметок, а также иные сообщения связанные с работой пользователя с заметками 
 
