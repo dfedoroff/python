@@ -18,3 +18,7 @@ class Controller(object):
     def create_note(self, note):
         self.model.create_note(note)
         self.view.print_note_saved()
+
+    def update_note(self, note_id, note):
+        self.model.update_note(note_id, note)
+        self.view.print_note_updated(note_id)
