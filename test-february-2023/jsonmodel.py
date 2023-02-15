@@ -32,6 +32,16 @@ class JSONmodel(object):
         else:
             View.print_note_id_not_exist(search_id)
 
+    def update_note(self, search_id, note):
+        self.notes = self.read_notes()
+        for field in self.notes:
+            if field.note_id == search_id:
+                field.date = note.date
+                field.title = note.title
+                field.text = note.text
+
+        self.write_json_file(self.notes)
+
     def write_json_file(self, notes):
         json_strings_list = list()
         for note in notes:
