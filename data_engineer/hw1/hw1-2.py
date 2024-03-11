@@ -27,3 +27,18 @@ def get_number_input():
                 print("Число должно быть в диапазоне от 0 до 100000.")
         except ValueError:
             print("Пожалуйста, введите корректное целое число.")
+
+
+def main():
+    number = get_number_input()
+    if number in (0, 1):
+        result = f"Число {number} - ни простое, ни составное."
+    elif is_prime(number):
+        result = f"Число {number} - простое."
+    else:
+        result = f"Число {number} - составное."
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
