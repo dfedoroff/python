@@ -15,3 +15,15 @@ def is_prime(number):
         if number % i == 0:
             return False
     return True
+
+
+def get_number_input():
+    while True:
+        try:
+            number = int(input("Введите число от 0 до 100000: "))
+            if 0 <= number <= 100000:
+                return number
+            else:
+                print("Число должно быть в диапазоне от 0 до 100000.")
+        except ValueError:
+            print("Пожалуйста, введите корректное целое число.")
