@@ -24,3 +24,14 @@ def integer_to_hex(number):
         hex_string = hex_chars[number % 16] + hex_string
         number //= 16
     return "0x" + hex_string
+
+
+def main():
+    number = get_number_input()
+    calculated_hex = integer_to_hex(number)
+    print(f"Шестнадцатеричное представление числа {number}: {calculated_hex}")
+    assert calculated_hex == hex(number), f"Ошибка: {calculated_hex} != {hex(number)}"
+
+
+if __name__ == "__main__":
+    main()
