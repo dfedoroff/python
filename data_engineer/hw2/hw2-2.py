@@ -19,3 +19,9 @@ def get_fraction_input(prompt):
             return Fraction(numerator, denominator)
         except ValueError:
             print("Пожалуйста, введите дробь в формате 'a/b', где a и b - целые числа.")
+
+
+def calculate_sum_and_product(fraction1, fraction2):
+    sum_result = fraction1 + fraction2
+    product_result = fraction1 * fraction2
+    return sum_result, product_result
