@@ -25,3 +25,16 @@ def calculate_sum_and_product(fraction1, fraction2):
     sum_result = fraction1 + fraction2
     product_result = fraction1 * fraction2
     return sum_result, product_result
+
+
+def main():
+    print("Введите две дроби в формате 'a/b'.")
+    fraction1 = get_fraction_input("Введите первую дробь: ")
+    fraction2 = get_fraction_input("Введите вторую дробь: ")
+    sum_result, product_result = calculate_sum_and_product(fraction1, fraction2)
+    print(f"Сумма дробей равна: {sum_result}")
+    print(f"Произведение дробей равно: {product_result}")
+
+
+if __name__ == "__main__":
+    main()
