@@ -8,6 +8,7 @@
 # или из документации к языку.
 
 import re
+from collections import Counter
 
 
 def read_and_clean_text(file_path):
@@ -15,3 +16,10 @@ def read_and_clean_text(file_path):
         text = file.read().lower()
     cleaned_text = re.sub(r"[\W_]+", " ", text)
     return cleaned_text
+
+
+def get_top_10_words(text):
+    words = text.split()
+    word_counts = Counter(words)
+    top_10_words = word_counts.most_common(10)
+    return top_10_words
