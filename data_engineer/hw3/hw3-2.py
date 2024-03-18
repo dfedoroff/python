@@ -23,3 +23,9 @@ def get_top_10_words(text):
     word_counts = Counter(words)
     top_10_words = word_counts.most_common(10)
     return top_10_words
+
+
+def write_top_10_to_file(top_10_words, output_file_path):
+    with open(output_file_path, "w", encoding="utf-8") as output_file:
+        for word, count in top_10_words:
+            output_file.write(f"{word} - {count}\n")
