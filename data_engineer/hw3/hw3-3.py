@@ -33,3 +33,14 @@ def find_packing_combinations(items, max_load):
             selected_items.append((item, weight))
             current_weight += weight
     return selected_items, current_weight
+
+
+def main():
+    items = generate_items()
+    max_load = 100
+    combinations, total_weight = find_packing_combinations(items, max_load)
+    print(f"Вещи в рюкзаке: {combinations}, общий вес: {total_weight}")
+
+
+if __name__ == "__main__":
+    main()
