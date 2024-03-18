@@ -15,3 +15,17 @@ def generate_random_list(size, min_value, max_value):
 
 def find_duplicates(input_list):
     return list({element for element in input_list if input_list.count(element) > 1})
+
+
+def main():
+    size = 5
+    min_value = 1
+    max_value = 10
+    random_list = generate_random_list(size, min_value, max_value)
+    print(f"Исходный список: {random_list}")
+    duplicates = find_duplicates(random_list)
+    print(f"Список дублирующихся элементов без дубликатов: {duplicates}")
+
+
+if __name__ == "__main__":
+    main()
