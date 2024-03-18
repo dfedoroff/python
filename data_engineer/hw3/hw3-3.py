@@ -8,6 +8,9 @@
 # Достаточно вернуть один допустимый вариант.
 # *Верните все возможные варианты комплектации рюкзака.
 
+import random
+
+
 def generate_items():
     return {
         "tent": 50,
@@ -18,3 +21,15 @@ def generate_items():
         "map": 2,
         "knife": 3
     }
+
+
+def find_packing_combinations(items, max_load):
+    selected_items = []
+    current_weight = 0
+    items_list = list(items.items())
+    random.shuffle(items_list)  # Для обеспечения разнообразия результатов
+    for item, weight in items_list:
+        if current_weight + weight <= max_load:
+            selected_items.append((item, weight))
+            current_weight += weight
+    return selected_items, current_weight
