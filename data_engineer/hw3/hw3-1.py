@@ -11,3 +11,7 @@ import random
 
 def generate_random_list(size, min_value, max_value):
     return [random.randint(min_value, max_value) for _ in range(size)]
+
+
+def find_duplicates(input_list):
+    return list({element for element in input_list if input_list.count(element) > 1})
