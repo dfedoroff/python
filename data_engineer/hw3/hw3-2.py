@@ -29,3 +29,19 @@ def write_top_10_to_file(top_10_words, output_file_path):
     with open(output_file_path, "w", encoding="utf-8") as output_file:
         for word, count in top_10_words:
             output_file.write(f"{word} - {count}\n")
+
+
+def process_file(input_file_path, output_file_path):
+    text = read_and_clean_text(input_file_path)
+    top_10_words = get_top_10_words(text)
+    write_top_10_to_file(top_10_words, output_file_path)
+
+
+def main():
+    input_file_path = "text.txt"
+    output_file_path = "top_10_words.txt"
+    process_file(input_file_path, output_file_path)
+
+
+if __name__ == "__main__":
+    main()
