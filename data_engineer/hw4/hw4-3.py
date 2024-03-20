@@ -24,3 +24,14 @@ class ATM:
         elif operation == 4:
             self.print_transaction_history()
         return True
+
+    def prompt_for_operation(self):
+        print(
+            "\nВведите номер операции:\n"
+            "1. Пополнение счета\n"
+            "2. Снятие наличных\n"
+            "3. Показать баланс\n"
+            "4. История операций\n"
+            "5. Выйти\n"
+        )
+        return int(input("Введите номер операции: "))
