@@ -41,3 +41,11 @@ class ATM:
             self.commission_rate = 10
         amount = self.prompt_for_amount(operation)
         self.apply_transaction(operation, amount)
+
+    def prompt_for_amount(self, operation):
+        while True:
+            amount = int(input("Введите сумму (кратную 50): "))
+            if amount % 50 == 0:
+                return amount
+            else:
+                print("Сумма должна быть кратной 50. Повторите попытку.")
