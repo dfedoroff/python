@@ -12,3 +12,12 @@ def invert_key_value(**kwargs):
     for key, value in kwargs.items():
         result[str(value)] = key
     return result
+
+
+def main():
+    data = invert_key_value(students=["Иван", "Маша"], group_friends={1: "Алексей", 2: "Елена", 3: "Николай"})
+    print(data)
+
+
+if __name__ == "__main__":
+    main()
