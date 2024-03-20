@@ -70,3 +70,13 @@ class ATM:
         print("\nИстория транзакций:")
         for number, transaction in enumerate(self.transaction_history, 1):
             print(f"{number}. {transaction}")
+
+
+def main():
+    atm = ATM()
+    while atm.handle_transaction():
+        pass
+
+
+if __name__ == "__main__":
+    main()
