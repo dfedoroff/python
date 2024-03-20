@@ -49,3 +49,19 @@ class ATM:
                 return amount
             else:
                 print("Сумма должна быть кратной 50. Повторите попытку.")
+
+    def apply_transaction(self, operation, amount):
+        commission = 0.03 if self.transaction_count == 3 else 0 + self.commission_rate
+        if operation == 1:  # Пополнение
+            transaction_amount = amount - (amount * commission)
+            self.balance += transaction_amount
+            self.transaction_history.append(f"Пополнение +{transaction_amount}")
+        elif operation == 2:  # Снятие
+            if amount > self.balance:
+                print("Ошибочная операция!")
+                return
+            fee = max(min(amount * (0.015 + commission), 600), 30)
+            self.balance -= amount + fee
+            self.transaction_history.append(f"Снятие средств -{amount}")
+            self.transaction_history.append(f"Комиссия за снятие средств -{fee}")
+        self.transaction_count += 1
