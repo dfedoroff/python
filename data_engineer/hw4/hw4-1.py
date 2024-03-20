@@ -7,3 +7,7 @@
 def transpose_matrix(matrix):
     return [list(row) for row in zip(*matrix)]
 
+
+def print_matrix(matrix):
+    for row in matrix:
+        print("\t".join(str(element) for element in row))
