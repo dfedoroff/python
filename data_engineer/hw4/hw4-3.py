@@ -35,3 +35,9 @@ class ATM:
             "5. Выйти\n"
         )
         return int(input("Введите номер операции: "))
+
+    def process_transaction(self, operation):
+        if self.balance >= 5_000_000:
+            self.commission_rate = 10
+        amount = self.prompt_for_amount(operation)
+        self.apply_transaction(operation, amount)
