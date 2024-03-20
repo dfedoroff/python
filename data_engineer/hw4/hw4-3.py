@@ -65,3 +65,8 @@ class ATM:
             self.transaction_history.append(f"Снятие средств -{amount}")
             self.transaction_history.append(f"Комиссия за снятие средств -{fee}")
         self.transaction_count += 1
+
+    def print_transaction_history(self):
+        print("\nИстория транзакций:")
+        for number, transaction in enumerate(self.transaction_history, 1):
+            print(f"{number}. {transaction}")
