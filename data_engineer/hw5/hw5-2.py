@@ -13,3 +13,7 @@ def calculate_bonus_sum(names, wages, bonus_percents):
         name: wage + (wage * float(bonus_percent.rstrip("%")) / 100)
         for name, wage, bonus_percent in zip(names, wages, bonus_percents)
     }
+
+def print_bonus_sums(bonus_sums):
+    for name, total in bonus_sums.items():
+        print(f"Имя сотрудника: {name} \t зарплата сотрудника с учётом премии: {total}")
