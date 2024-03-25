@@ -9,3 +9,12 @@ def fibonacci_generator(n):
     for _ in range(n):
         yield a
         a, b = b, a + b
+
+
+def main():
+    for number in fibonacci_generator(10):
+        print(number)
+
+
+if __name__ == "__main__":
+    main()
