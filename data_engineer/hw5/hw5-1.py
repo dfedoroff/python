@@ -13,3 +13,15 @@ def extract_file_info(absolute_path):
     path, full_filename = os.path.split(absolute_path)
     filename, extension = os.path.splitext(full_filename)
     return (path, filename, extension)
+
+
+def main():
+    absolute_path = input(
+        "Введите абсолютный путь до файла (например, C:/Users/ИмяПользователя/Documents/file.txt): "
+    )
+    info = extract_file_info(absolute_path)
+    print(info)
+
+
+if __name__ == "__main__":
+    main()
