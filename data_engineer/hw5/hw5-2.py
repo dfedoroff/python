@@ -14,6 +14,19 @@ def calculate_bonus_sum(names, wages, bonus_percents):
         for name, wage, bonus_percent in zip(names, wages, bonus_percents)
     }
 
+
 def print_bonus_sums(bonus_sums):
     for name, total in bonus_sums.items():
         print(f"Имя сотрудника: {name} \t зарплата сотрудника с учётом премии: {total}")
+
+
+def main():
+    names = ["Алексей", "Наталья", "Любовь"]
+    wages = [35_000, 40_000, 300_000]
+    bonus_percents = ["23%", "32.5%", "100%"]
+    bonus_sums = calculate_bonus_sum(names, wages, bonus_percents)
+    print_bonus_sums(bonus_sums)
+
+
+if __name__ == "__main__":
+    main()
