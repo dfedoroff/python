@@ -50,3 +50,14 @@ def is_valid_date(date_str):
             else "Дата заполнена некорректно."
         )
     return "Дата заполнена некорректно."
+
+
+def main():
+    if len(sys.argv) == 2:
+        print(is_valid_date(sys.argv[1]))
+    else:
+        print("Дата для проверки не указана.")
+
+
+if __name__ == "__main__":
+    main()
