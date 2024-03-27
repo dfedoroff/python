@@ -22,3 +22,12 @@ def is_queens_safe(queens):
 def generate_random_queens():
     positions = [(i, random.randint(1, 8)) for i in range(1, 9)]
     return positions
+
+
+def find_safe_queens_arrangements(n):
+    successful_arrangements = []
+    while len(successful_arrangements) < n:
+        random_queens = generate_random_queens()
+        if is_queens_safe(random_queens):
+            successful_arrangements.append(random_queens)
+    return successful_arrangements
