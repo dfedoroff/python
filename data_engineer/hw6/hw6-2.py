@@ -18,3 +18,12 @@ def is_queens_safe(queens):
                abs(queens[i][0] - queens[j][0]) == abs(queens[i][1] - queens[j][1]):
                 return False
     return True
+
+
+def main():
+    queens = [(1, 5), (2, 3), (3, 1), (4, 7), (5, 2), (6, 8), (7, 6), (8, 4)]
+    print(is_queens_safe(queens))
+
+
+if __name__ == "__main__":
+    main()
