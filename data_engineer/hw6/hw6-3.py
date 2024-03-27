@@ -31,3 +31,12 @@ def find_safe_queens_arrangements(n):
         if is_queens_safe(random_queens):
             successful_arrangements.append(random_queens)
     return successful_arrangements
+
+
+def main():
+    for arrangement in find_safe_queens_arrangements(4):
+        print(arrangement)
+
+
+if __name__ == "__main__":
+    main()
