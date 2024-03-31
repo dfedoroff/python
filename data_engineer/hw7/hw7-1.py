@@ -37,3 +37,17 @@ def rename_and_report(directory, target_files, untouched_files, desired_name, di
         os.rename(os.path.join(directory, filename), os.path.join(directory, new_filename))
         renamed_files.append((filename, new_filename))
     return renamed_files, untouched_files
+
+
+def group_rename(desired_name, digits_num, source_ext, destination_ext, name_range, directory="."):
+    target_files, untouched_files = filter_files(directory, source_ext)
+    renamed_files, untouched_files = rename_and_report(directory, target_files, untouched_files, desired_name, digits_num, destination_ext, name_range)
+
+    if renamed_files:
+        print("Переименованные файлы:")
+        for old, new in renamed_files:
+            print(f"{old} -> {new}")
+    if untouched_files:
+        print("\nФайлы, оставленные без изменений:")
+        for file in untouched_files:
+            print(file)
