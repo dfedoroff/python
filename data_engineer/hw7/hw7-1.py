@@ -26,3 +26,14 @@ def filter_files(directory, source_ext):
 
 def construct_new_filename(name_part, desired_name, count, digits_num, destination_ext):
     return f"{name_part}{desired_name}{str(count).zfill(digits_num)}{destination_ext}"
+
+
+def rename_and_report(directory, target_files, untouched_files, desired_name, digits_num, destination_ext, name_range):
+    renamed_files = []
+    for count, filename in enumerate(target_files, 1):
+        old_name, _ = os.path.splitext(filename)
+        name_part = old_name[name_range[0]:name_range[1]]
+        new_filename = construct_new_filename(name_part, desired_name, count, digits_num, destination_ext)
+        os.rename(os.path.join(directory, filename), os.path.join(directory, new_filename))
+        renamed_files.append((filename, new_filename))
+    return renamed_files, untouched_files
