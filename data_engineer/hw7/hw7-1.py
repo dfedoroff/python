@@ -51,3 +51,11 @@ def group_rename(desired_name, digits_num, source_ext, destination_ext, name_ran
         print("\nФайлы, оставленные без изменений:")
         for file in untouched_files:
             print(file)
+
+
+def main():
+    group_rename("new_file", 3, ".txt", ".md", [1, 3], "./my_folder")
+
+
+if __name__ == "__main__":
+    main()
