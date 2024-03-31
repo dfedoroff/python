@@ -22,3 +22,7 @@ def filter_files(directory, source_ext):
     target_files = [f for f in all_files if f.endswith(source_ext)]
     untouched_files = [f for f in all_files if not f.endswith(source_ext)]
     return target_files, untouched_files
+
+
+def construct_new_filename(name_part, desired_name, count, digits_num, destination_ext):
+    return f"{name_part}{desired_name}{str(count).zfill(digits_num)}{destination_ext}"
