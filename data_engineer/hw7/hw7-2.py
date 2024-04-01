@@ -20,3 +20,9 @@ def fill_file_with_numbers(filename, lines_count):
             ints = random.randint(_MIN_VALUE, _MAX_VALUE)
             floats = random.uniform(_MIN_VALUE, _MAX_VALUE)
             file.write(f"{ints}{_DELIMITER}{floats}\n")
+
+
+def generate_name():
+    length = random.randint(_MIN_LEN, _MAX_LEN)
+    name = "".join(random.choice(_VOWELS if i % 3 == 0 else _CONSONANTS) for i in range(length))
+    return name.capitalize()
