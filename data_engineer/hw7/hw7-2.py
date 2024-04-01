@@ -45,3 +45,12 @@ def multiply_numbers_and_associate_with_names(numbers_file, names_file, result_f
                 result_name = name.lower() if product < 0 else name.upper()
                 product_value = abs(product) if product < 0 else round(product)
                 result.write(f"{result_name} - {product_value}\n")
+
+
+def create_file_with_extension(extension, min_len=6, max_len=30, min_bytes=256, max_bytes=4096, files_count=42):
+    for _ in range(files_count):
+        name_length = random.randint(min_len, min(max_len, 26))
+        name = ''.join(random.choices("abcdefghijklmnopqrstuvwxyz", k=name_length))
+        filename = f"{name}.{extension}"
+        with open(filename, "wb") as file:
+            file.write(random.randbytes(random.randint(min_bytes, max_bytes)))
