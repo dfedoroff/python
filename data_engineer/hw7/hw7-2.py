@@ -59,3 +59,14 @@ def create_file_with_extension(extension, min_len=6, max_len=30, min_bytes=256, 
 def generate_files_with_extensions(extensions):
     for extension in extensions:
         create_file_with_extension(extension, files_count=1)
+
+
+def main():
+    fill_file_with_numbers("numeric.txt", 10)
+    fill_file_with_names("names.txt", 10)
+    multiply_numbers_and_associate_with_names("numeric.txt", "names.txt", "new.txt")
+    generate_files_with_extensions(["txt", "log", "csv"])
+
+
+if __name__ == "__main__":
+    main()
