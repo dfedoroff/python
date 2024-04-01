@@ -54,3 +54,8 @@ def create_file_with_extension(extension, min_len=6, max_len=30, min_bytes=256, 
         filename = f"{name}.{extension}"
         with open(filename, "wb") as file:
             file.write(random.randbytes(random.randint(min_bytes, max_bytes)))
+
+
+def generate_files_with_extensions(extensions):
+    for extension in extensions:
+        create_file_with_extension(extension, files_count=1)
