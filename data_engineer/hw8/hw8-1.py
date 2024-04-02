@@ -50,3 +50,25 @@ def calculate_directory_size(directory):
     for root, dirs, files in os.walk(directory):
         total_size += sum(os.path.getsize(os.path.join(root, name)) for name in files)
     return total_size
+
+
+def analyze_directory(directory, parent_directory=""):
+    data = {}
+    for item in os.listdir(directory):
+        item_path = os.path.join(directory, item)
+        if os.path.isfile(item_path):
+            data[item_path] = {
+                "type": "File",
+                "name": item,
+                "size": os.path.getsize(item_path),
+                "parent_directory": parent_directory,
+            }
+        elif os.path.isdir(item_path):
+            data[item_path] = {
+                "type": "Directory",
+                "name": item,
+                "size": calculate_directory_size(item_path),
+                "parent_directory": parent_directory,
+            }
+            data.update(analyze_directory(item_path, parent_directory=item))
+    return data
