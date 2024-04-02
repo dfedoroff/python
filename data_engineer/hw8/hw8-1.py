@@ -43,3 +43,10 @@ def write_to_pickle(data, directory, filename):
     filepath = os.path.join(directory, f"{filename}.pickle")
     with open(filepath, "wb") as file:
         pickle.dump(data, file)
+
+
+def calculate_directory_size(directory):
+    total_size = 0
+    for root, dirs, files in os.walk(directory):
+        total_size += sum(os.path.getsize(os.path.join(root, name)) for name in files)
+    return total_size
