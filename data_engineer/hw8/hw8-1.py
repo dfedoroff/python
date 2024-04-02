@@ -12,6 +12,7 @@
 
 import json
 import csv
+import pickle
 import os
 
 
@@ -36,3 +37,9 @@ def write_to_csv(data, directory, filename):
                     value["parent_directory"],
                 ]
             )
+
+
+def write_to_pickle(data, directory, filename):
+    filepath = os.path.join(directory, f"{filename}.pickle")
+    with open(filepath, "wb") as file:
+        pickle.dump(data, file)
