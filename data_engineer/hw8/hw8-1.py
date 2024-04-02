@@ -11,6 +11,7 @@
 # в ней с учётом всех вложенных файлов и директорий.
 
 import json
+import csv
 import os
 
 
@@ -18,3 +19,20 @@ def write_to_json(data, directory, filename):
     filepath = os.path.join(directory, f"{filename}.json")
     with open(filepath, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
+
+
+def write_to_csv(data, directory, filename):
+    filepath = os.path.join(directory, f"{filename}.csv")
+    with open(filepath, "w", encoding="utf-8", newline="") as file:
+        writer = csv.writer(file, delimiter=";")
+        writer.writerow(["Path", "Type", "Name", "Size", "Parent Directory"])
+        for key, value in data.items():
+            writer.writerow(
+                [
+                    key,
+                    value["type"],
+                    value["name"],
+                    value["size"],
+                    value["parent_directory"],
+                ]
+            )
