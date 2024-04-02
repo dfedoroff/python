@@ -72,3 +72,16 @@ def analyze_directory(directory, parent_directory=""):
             }
             data.update(analyze_directory(item_path, parent_directory=item))
     return data
+
+
+def main():
+    target_directory = "/home/ubuntu/Documents/geek_brains/python/data_engineer/hw8"
+    result_data = analyze_directory(target_directory)
+    current_directory = os.getcwd()
+    write_to_json(result_data, current_directory, "directory_analysis")
+    write_to_csv(result_data, current_directory, "directory_analysis")
+    write_to_pickle(result_data, current_directory, "directory_analysis")
+
+
+if __name__ == "__main__":
+    main()
