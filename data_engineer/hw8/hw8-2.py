@@ -7,6 +7,7 @@
 
 import json
 import csv
+import pickle
 from pathlib import Path
 from typing import Dict, Any
 
@@ -32,6 +33,12 @@ def write_to_csv(data: Dict[str, Any], directory: Path, filename: str) -> None:
                     value["parent_directory"],
                 ]
             )
+
+
+def write_to_pickle(data: Dict[str, Any], directory: Path, filename: str) -> None:
+    filepath = directory / f"{filename}.pickle"
+    with filepath.open("wb") as file:
+        pickle.dump(data, file)
 
 
 def calculate_directory_size(directory: Path) -> int:
