@@ -5,8 +5,15 @@
 # Соберите из созданных на уроке и в рамках домашнего задания
 # функций пакет для работы с файлами разных форматов.
 
+import json
 from pathlib import Path
 from typing import Dict, Any
+
+
+def write_to_json(data: Dict[str, Any], directory: Path, filename: str) -> None:
+    filepath = directory / f"{filename}.json"
+    with filepath.open("w", encoding="utf-8") as file:
+        json.dump(data, file, indent=4)
 
 
 def calculate_directory_size(directory: Path) -> int:
